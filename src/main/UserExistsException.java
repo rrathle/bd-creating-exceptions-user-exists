@@ -1,4 +1,4 @@
-package com.amazon.ata.creatingexceptions.prework;
+package main;
 
 /**
  * Custom exception for when we try to create a new user but one with

@@ -1,4 +1,4 @@
-package com.amazon.ata.creatingexceptions.prework;
+package main;
 
 import org.junit.jupiter.api.Test;
 

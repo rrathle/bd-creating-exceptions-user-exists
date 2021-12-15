@@ -1,4 +1,4 @@
-package com.amazon.ata.creatingexceptions.prework;
+package main;
 
 /**
  * POJO representing a User, containing name, email, and phone number.
