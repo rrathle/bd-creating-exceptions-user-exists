@@ -1,12 +1,5 @@
 ### Creating Exceptions
 
-**Branch name:** creatingexceptions-prework
-
-**RDE workflows:**
-* `creatingexceptions-prework-userexistsexception`
-* `creatingexceptions-prework-manageusers`
-* `creatingexceptions-prework`
-
 Expected time required: 15 min
 
 The goal of the exercise is to create a custom `Exception` class, called `UserExistsException`,
@@ -19,21 +12,27 @@ to complete using the `UserExistsException` you will create.
 
 1) Complete the `UserExistsException` class with the 4 recommended constructors. `UserExistsException`
    should be a checked `Exception`. Set up IntellIJ to generate the `serialVersionUID` for you automatically.
-   You can run the `creatingexceptions-prework-userexistsexception` workflow to test that your implementation is
-   complete.
 
 2) Update the `createUser` method provided for you in `UserManager` to throw your freshly-implemented
-   `UserExistsExcpetion` if `isEmailInUse()` returns true. You can run the `creatingexceptions-prework-manageusers`
-   workflow to test your change.
+   `UserExistsExcpetion` if `isEmailInUse()` returns true. 
 
 **You have completed this pre-work when:**
 * You have implemented the `UserExistsException` class with all of its constructors.
 * You have updated `createUser()` in `UserManager` to throw `UserExistsException` when a new user's email is already
   in use.
-* The `creatingexceptions-prework` workflow is passing (this workflow tests both `UserExistsExcpetion` and
-  `UserManager`).
+* All tests are passing for both `UserExistsExcpetion` and
+  `UserManager`.
 * You have committed and pushed your code.
 * You have answered the Canvas quiz with a link to your commit on code browser.
 
 **HINT:**
-* [How do I get IntelliJ to add the serialVersionUID?](./hints/hint-01.md)
+
+**How do I get IntelliJ to add the serialVersionUID?**
+
+  In IntelliJ, go to "IntelliJ IDEA" → "Preferences..." → "Editor" → "Inspections" → "Java" → "Serialization issues" →
+  "Serializable class without 'serialVersionUID'" - select the check box and click 'OK'. This will make IntelliJ tell
+  you when a `Serializable` class is missing the `serialVersionUID` field.
+
+To have IntelliJ generate the `serialVersionUID` for you, return to your exception class. The class name should be
+  underlined. If you hover over it, you should see the option to "Add 'serialVersionUID' field". Select that text or
+  press ⌥⇧↵ to generate the `serialVersionUID`.
